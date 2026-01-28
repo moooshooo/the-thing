@@ -1,12 +1,16 @@
-import './App.css'
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-
   return (
     <>
-      <h1>Start here</h1>
+      <Navbar />
+      <AppRoutes />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
