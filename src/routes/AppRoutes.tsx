@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import FilmPage from "../pages/FilmPage";
-import ShowPage from "../pages/ShowPage"
+import ShowPage from "../pages/ShowPages"
 
 const AppRoutes = () => {
   return (
