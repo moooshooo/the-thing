@@ -1,28 +1,37 @@
-import { useState, useEffect } from "react";
-import api from "../services/api";
+import type { ItemCardProps } from "../types/tmdb";
 
-const MovieList = () => {
-  const [movies, setMovies] = useState([]);
+const ItemCard = ({ item, type }: ItemCardProps) => {
+  const displayTitle = item.title || item.name;
+  const displayDate = item.release_date || item.first_air_date;
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await api.get("/movie/popular");
-
-        setMovies(response.data.results);
-      } catch (error) {
-        console.error("Kunde inte hämta filmer:", error);
-      }
-    };
-
-    fetchMovies();
-  }, []);
+  const imageUrl = `${import.meta.env.VITE_IMAGE_BASE_URL}/w500${item.poster_path}`;
 
   return (
-    <div>
-      {movies.map((movie) => (
-        <h2 key={movie.id}>{movie.title}</h2>
-      ))}
+    <div className="group relative bg-[#111] rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 hover:z-10 cursor-pointer shadow-lg">
+      <div className="aspect-2/3 w-full">
+        <img
+          src={imageUrl}
+          alt={displayTitle}
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="p-3">
+        <h3 className="text-white font-semibold text-sm truncate">
+          {displayTitle}
+        </h3>
+        <div className="flex justify-between items-center mt-2 text-xs text-gray-400">
+          <span>{displayDate?.split("-")[0]}</span>
+          <span className="bg-yellow-500 text-black px-1.5 py-0.5 rounded font-bold">
+            {item.vote_average.toFixed(1)}
+          </span>
+        </div>
+        <span className="text-10px uppercase tracking-wider text-blue-400 mt-1 block">
+          {type === "movie" ? "Film" : "Serie"}
+        </span>
+      </div>
     </div>
   );
 };
+
+export default ItemCard;
