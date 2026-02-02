@@ -2,8 +2,8 @@ import React from 'react'
 
 const FilmPage = () => {
   return (
-    <div>
-      
+    <div className='Main'>
+      <p> Filmsidan</p>
     </div>
   )
 }
