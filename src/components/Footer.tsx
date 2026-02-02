@@ -2,15 +2,20 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
-      <a href="https://github.com/moooshooo/g-project" target="_blank">
+    <footer className="flex flex-col justify-center p-10 items-center">
+      <p className="text-sm">
+        Filmprojekt | Kurs 2 - Ramverk & Komponentbaserad utveckling{" "}
+      </p>
+      <p className="text-sm">Alexander & M. Leon </p>
+      <a
+        href="https://github.com/moooshooo/the-thing/"
+        target="_blank"
+        className="text-sm"
+      >
         GitHub
       </a>
-      <p>Filmprojekt | Kurs 2 - Ramverk & Komponentbaserad utveckling </p>
-      <p>Alexander & M. Leon </p>
-      <p>Copy it's your right! 2026©</p>
+      <p className="text-sm">Copy it's your right! 2026©</p>
     </footer>
   );
 };
-
 export default Footer;
