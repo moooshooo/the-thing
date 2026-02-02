@@ -1,8 +1,8 @@
 
 
 const ShowPage = () => {
-  return (
-    <div>
+  return  (
+    <div className='Main'>
       
     </div>
   )
