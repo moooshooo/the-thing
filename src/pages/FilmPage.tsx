@@ -1,29 +1,10 @@
-import { useEffect, useState } from "react";
-import api from "../services/api";
+import useTmdb from "../hooks/useTmdb";
 import ItemCard from "../components/ItemCard";
-import type { TMDBItem } from "../types/tmdb";
 
 const Filmpage = () => {
-  const [movies, setMovies] = useState<TMDBItem[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { data: movies, loading } = useTmdb("/movie/popular");
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await api.get("/movie/popular");
-        setMovies(response.data.results);
-      } catch (error) {
-        console.error("Kunde inte hämta filmer:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchMovies();
-  }, []);
-
-  if (loading) {
-    return <div className="text-white text-center mt-20">Laddar filmer...</div>;
-  }
+  if (loading) return <div className="text-white">Laddar...</div>;
 
   return (
     <div className="bg-black min-h-screen pb-20">
@@ -36,9 +17,11 @@ const Filmpage = () => {
       </div>
 
       <div className="max-w-350 mx-auto px-7.5">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+        <div className="flex flex-wrap gap-6 justify-center">
           {movies.map((movie) => (
-            <ItemCard key={movie.id} item={movie} type="movie" />
+            <div key={movie.id} className="w-35 sm:w-50">
+              <ItemCard item={movie} type="movie" />
+            </div>
           ))}
         </div>
       </div>

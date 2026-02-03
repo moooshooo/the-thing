@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
       <a
         href="https://github.com/moooshooo/the-thing/"
         target="_blank"
-        className="text-sm"
+        className="text-sm cursor-pointer"
       >
         GitHub
       </a>

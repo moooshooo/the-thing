@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -7,11 +6,11 @@ const Navbar = () => {
       <div id="logo" className="px-10">
         <img src="../src/assets/logo.png" />
       </div>
-      <nav className="flex gap-15 px-30 text-2xl font-bold">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/film">Filmer</NavLink>
-        <NavLink to="/shows">Serier</NavLink>
-        <NavLink to="/about">Om oss</NavLink>
+      <nav className="flex gap-15 px-30 text-2xl cursor-pointer">
+        <NavLink to="/" className="hover:underline hover:underline-offset-8">Home</NavLink>
+        <NavLink to="/film" className="hover:underline hover:underline-offset-8">Filmer</NavLink>
+        <NavLink to="/shows" className="hover:underline hover:underline-offset-8">Serier</NavLink>
+        <NavLink to="/about" className="hover:underline hover:underline-offset-8">Om oss</NavLink>
       </nav>
     </header>
   );
