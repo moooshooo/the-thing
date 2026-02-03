@@ -22,7 +22,7 @@ const useTmdb = (endpoint: string) => {
     };
 
     fetchData();
-  }, [endpoint]); // Körs om endpointen ändras
+  }, [endpoint]);
 
   return { data, loading, error };
 };
