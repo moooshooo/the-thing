@@ -19,7 +19,7 @@ const Filmpage = () => {
       <div className="max-w-350 mx-auto px-7.5">
         <div className="flex flex-wrap gap-6 justify-center">
           {movies.map((movie) => (
-            <div key={movie.id} className="w-35 sm:w-50">
+            <div key={movie.id} className="MovieItem w-35 sm:w-50">
               <ItemCard item={movie} type="movie" />
             </div>
           ))}
