@@ -7,7 +7,7 @@ const ItemCard = ({ item, type }: ItemCardProps) => {
   const imageUrl = `${import.meta.env.VITE_IMAGE_BASE_URL}/w500${item.poster_path}`;
 
   return (
-    <div className="group relative bg-[#111] rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 hover:z-10 cursor-pointer shadow-lg shadow-blue-950">
+    <div className="group relative bg-[#111] overflow-hidden transition-transform duration-300 hover:scale-105 hover:z-10 cursor-pointer shadow-lg shadow-blue-950">
       <div className="aspect-2/3 w-full">
         <img
           src={imageUrl}
