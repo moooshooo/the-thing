@@ -21,7 +21,7 @@ const ShowPage = () => {
       <div className="max-w-350 mx-auto px-7.5">
         <div className="flex flex-wrap gap-6 justify-center">
           {shows.map((show) => (
-            <div key={show.id} className="w-35 sm:w-50">
+            <div key={show.id} className="ShowItem w-35 sm:w-50">
               <ItemCard item={show} type="tv" />
             </div>
           ))}
