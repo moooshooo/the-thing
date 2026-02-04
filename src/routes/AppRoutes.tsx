@@ -12,8 +12,12 @@ const AppRoutes = () => {
       <Route path="/film" element={<FilmPage />}></Route>
       <Route path="/shows" element={<ShowPage />}></Route>
       <Route path="/about" element={<AboutPage />}></Route>
+<<<<<<< Updated upstream
       <Route path="/login" element={<Login />} />
     
+=======
+      <Route path="/login" element={<Login />}></Route>
+>>>>>>> Stashed changes
     </Routes>
   );
 };
