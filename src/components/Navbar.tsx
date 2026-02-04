@@ -11,6 +11,7 @@ const Navbar = () => {
         <NavLink to="/film" className="hover:underline hover:underline-offset-8">Filmer</NavLink>
         <NavLink to="/shows" className="hover:underline hover:underline-offset-8">Serier</NavLink>
         <NavLink to="/about" className="hover:underline hover:underline-offset-8">Om oss</NavLink>
+        <NavLink to="/login" className="hover:underline hover:underline-offset-8">Logga in</NavLink>
       </nav>
     </header>
   );
