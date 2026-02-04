@@ -5,6 +5,8 @@ A movie projekt for getting information of the most popular shows and movies.
 If you are after quick acess quickinformation avout the top 20 most popular movies and series.
 
 ## Arkitecture
+
+```
 |
 |- assets
 |-- local images for this site
@@ -31,7 +33,7 @@ If you are after quick acess quickinformation avout the top 20 most popular movi
 |
 |- types
 |-- tmdb : some intresting types for TMDB
-
+```
 
 ## Routes
 Starts at HomePage and follow forward to others sides via the component NavBar using Navlinks
