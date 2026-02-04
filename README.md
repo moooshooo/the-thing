@@ -3,7 +3,7 @@
 
 Denna sida riktad till dom som söker snabb information när en film och serie har för information så som årtal och betyg den har fått
 
-## Arkitecture
+## Arkitekture / Mappstruktur
 ```
 src/
 ├── assets/         # Här lagras bilder några bilder
@@ -32,18 +32,25 @@ src/
 ```
 
 ## Routes
-Starts at HomePage and follow forward to others sides via the component NavBar using Navlinks
+Routing i denna sida startar från Home och via menyn högst upp kan du navigera dig mellan serier och filmer med hjälp av < NavLinks > i en separat fil för att hantera Routing och en separat komponent som hanterar Navbar
 
-## Components
-ItemCard: is a reusable component to show a show or a movie som it can be reuse.
+## Komponents
+ItemCard: Är en återanvändbar komponent som strukturerar varje film och serie. Som visar en films/serie: bild, titel/namn, årtal, betyg och typ = movie/tv (film eller serie).
 
-Footer: have som information with a link to our repository
+Footer: Är en komponent som följer med i alla sidor, i den finns kort information om skaparna och länk till vår repository
 
-Navbar: is a component that holds the routes to other pages in this site
+Navbar: Denna komponent har alla menyer 
 
+## Hooks
+Vi skapade en custom hook för att hålla oss till DRY-regeln (Don't Repeat Yourself) eftersom vi hämtar samma data för både filmer och serier men skiljer dom beroende på vilken kategori dom tillhör. 
+Detta gör vi efter vi har mappat i ShowPages/FilmPage genom props döpt till "Type" som kan antinven vara "movie"/"tv": 
+< ItemCard item={movie} type="movie" />
 
-## Testa
+## Testing
 
+## Trade-offs och reflektion
+
+# Testa
 ### Vad behövs
 - Node.js (v18 eller högre)
 - npm or yarn package manager
