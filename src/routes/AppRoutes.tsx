@@ -16,7 +16,7 @@ const AppRoutes = () => {
       <Route path="/film" element={<FilmPage />}></Route>
       <Route path="/shows" element={<ShowPage />}></Route>
       <Route path="/about" element={<AboutPage />}></Route>
-      {currentView === "login" ? (
+      {currentView === "logout" ? (
         <Route path="/login" element={<Login />} />
       ) : (
         <Route path="/logout" element={<Logout />} />
