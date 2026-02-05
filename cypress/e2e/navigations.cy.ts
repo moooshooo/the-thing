@@ -1,8 +1,3 @@
-describe("template spec", () => {
-  it("passes", () => {
-    cy.visit("https://example.cypress.io");
-  });
-});
 
 describe("Router test", () => {
   it("Korrekt navigering till Filmer", () => {
@@ -27,4 +22,12 @@ describe("Router test", () => {
     cy.get(".Main").should("exist");
   });
 
+});
+
+describe("login test", () => {
+  it("Du kan komma in till login", () => {
+    cy.visit("http://localhost:5173/login");
+    cy.url().should("include", "/login");
+    cy.get("h2").contains("Välkommen tillbaka").should("exist");
+  });
 });
