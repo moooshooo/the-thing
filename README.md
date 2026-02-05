@@ -46,11 +46,18 @@ Vi skapade en custom hook för att hålla oss till DRY-regeln (Don't Repeat Your
 Detta gör vi efter vi har mappat i ShowPages/FilmPage genom props döpt till "Type" som kan antinven vara "movie"/"tv": 
 < ItemCard item={movie} type="movie" />
 
-## Testing
+## Tester
 
 ## Trade-offs och reflektion
+Denna projeckt drabbades tyvärr av fler dördröjningar. som gjorde att leveransen dröjde.
+Vi landade väldigt snabbt på något gemensamt. En video sida där vi kunde få information om filmer och tv-serirer.
 
-# Testa
+Vi gick fram och tillbaka mellan JSX och TSX när tiden närmade sig.
+Att vi landade på TSX var att vi ville säkerhetsställa att vi visste vad som hämtades från TMDB, jsx gav lite problem när vi använde version 2 jämfört med version 3. (V2 använder API nyckel)
+
+## Ai användning
+
+# Testa hos tid
 ### Vad behövs
 - Node.js (v18 eller högre)
 - npm or yarn package manager
