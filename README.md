@@ -47,6 +47,8 @@ Detta gör vi efter vi har mappat i ShowPages/FilmPage genom props döpt till "T
 < ItemCard item={movie} type="movie" />
 
 ## Tester
+Vi använde oss av Cypress för att testa navigationen till sidorna.
+vi la till en class namn till både serier ( ShowItem ) och filmer ( MovieItem ) innuti "maping" för att kontrollera att APIn  laddas upp.
 
 ## Trade-offs och reflektion
 Denna projeckt drabbades tyvärr av fler dördröjningar. som gjorde att leveransen dröjde.
@@ -55,15 +57,18 @@ Vi landade väldigt snabbt på något gemensamt. En video sida där vi kunde få
 Vi gick fram och tillbaka mellan JSX och TSX när tiden närmade sig.
 Att vi landade på TSX var att vi ville säkerhetsställa att vi visste vad som hämtades från TMDB, jsx gav lite problem när vi använde version 2 jämfört med version 3. (V2 använder API nyckel, V3 använder TMDBs token åtkomst)
 
-
+En tradeof som var väldigt tydligt var valet mellan JSX och TSX, det självklara valet blev TSX, även med sitt stricka "typing" så gynnar den ökning av potentiella problem och fel.
+När vi gick till att göra denna projekt till JSX så blev det snabbt många saker som inte kändes bra och antalet fel kunde bli fel om vi inte "typade" vad vi skulle förvänta oss.
 
 ## Ai användning
 För error hantering i lokala states använde jag AI för att kunna få lite mer insyn i hantering av dessa.
+JS statment "Try", "Catch" och "Finally" gav ett lärande moment hur en kunde hantera dessa meddelnade.
 
-JS statment "Try", "Catch" och "Finally" gav ett lärande moment hur en kunde hantera dessa erro meddelnade.
+Ai hjälpte mig att felsköka problemen med typing som TMDB hade.
+TMDB har "namn" för serier och "title" för filmer.
+det möjligtgjorde ett snabb hantering av problemet istället för att läsa invecklad dokumentation hos TMDB
 
-
-# Testa hos tid
+# Installera denna sida
 ### Vad behövs
 - Node.js (v18 eller högre)
 - npm or yarn package manager
@@ -109,11 +114,25 @@ Appen kommer finnas `http://localhost:5XXX`
 npm run build
 ```
 
+## Kör Tester
+Vi har installerat Cypress och skrivit några tester för navigering och säkertställa att APIn hämtats.
+
+4 tester kontroller navigering av sidorna
+/login
+/home 
+/filmer + API
+/serier + API
+/about
+
+```bash
+npm run test
+```
 
 ### Final note
 This projekt is a demosite for a schoolprojekt
 Kurs 2 - Ramverk & Komponentbaserad utveckling
 
 By: Alexander & M.Leon
+Git repon: https://github.com/moooshooo/the-thing.git 
 
 Copy it's your right! 2026©
