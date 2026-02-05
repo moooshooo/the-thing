@@ -53,9 +53,15 @@ Denna projeckt drabbades tyvärr av fler dördröjningar. som gjorde att leveran
 Vi landade väldigt snabbt på något gemensamt. En video sida där vi kunde få information om filmer och tv-serirer.
 
 Vi gick fram och tillbaka mellan JSX och TSX när tiden närmade sig.
-Att vi landade på TSX var att vi ville säkerhetsställa att vi visste vad som hämtades från TMDB, jsx gav lite problem när vi använde version 2 jämfört med version 3. (V2 använder API nyckel)
+Att vi landade på TSX var att vi ville säkerhetsställa att vi visste vad som hämtades från TMDB, jsx gav lite problem när vi använde version 2 jämfört med version 3. (V2 använder API nyckel, V3 använder TMDBs token åtkomst)
+
+
 
 ## Ai användning
+För error hantering i lokala states använde jag AI för att kunna få lite mer insyn i hantering av dessa.
+
+JS statment "Try", "Catch" och "Finally" gav ett lärande moment hur en kunde hantera dessa erro meddelnade.
+
 
 # Testa hos tid
 ### Vad behövs
@@ -77,7 +83,7 @@ npm install
 3. Skapa filen `.env` i roten av ditt projekt
 
 ***Skapa du 4 variabler:***
-```bash
+```javascript
 VITE_BASE_URL=https://api.themoviedb.org/3
 VITE_IMAGE_BASE_URL=https://image.tmdb.org/t/p
 VITE_API_TOKEN=Token-från-TMDBs-sida
